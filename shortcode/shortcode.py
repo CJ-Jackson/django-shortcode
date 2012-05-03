@@ -53,7 +53,7 @@ def __hash__(kwargs):
     return 'shortcode_%s' % hash.hexdigest()
 
 def __callback__(match):
-    key = match.group('key')
+    key = match.group('key').lower()
     try:
         attr = match.group('pair')
         attr = __attr__(attr)
